@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Test from "@/components/Test";
+import Authors from "@/components/Authors";
+//...findet die Pade via @/src o.a. ../src//
 
 Vue.use(VueRouter)
 
@@ -9,6 +12,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
+  },
+  {
+    path: '/authors',
+    name: 'Author',
+    component: Authors
   },
   {
     path: '/about',
