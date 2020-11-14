@@ -1,15 +1,17 @@
 <template>
     <div>
-        <h1>Meine Autoren (Anzahle: )</h1>
-        <table class="table">
-            <tr>
-                <th>ID</th>
-                <th>Vorname</th>
-                <th>Nachname</th>
-            </tr>
-            <!-- hier authors per v-for mittles Author Komponente mit props: "author" ausgeben -->
-            <Author :key="item.id" v-for="item in authors" :author="item"/>
-        </table>
+        <h1>Meine Autoren (Anzahl: )</h1>
+        <div class="wrapper">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                </tr>
+                <!-- hier authors per v-for mittles Author Komponente mit props: "author" ausgeben -->
+                <Author :key="item.id" v-for="item in authors" :author="item"/>
+            </table>
+        </div>
     </div>
 </template>
 
@@ -28,5 +30,9 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 </style>

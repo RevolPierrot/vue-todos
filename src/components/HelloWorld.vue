@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <div>
+        <div class="wrapper">
             <span v-if="name">Dein Name lautet <b>{{ name }}</b></span>
             <span v-else><b>Bitte einen Namen eingeben.</b></span>
         </div>
@@ -38,13 +38,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 h3 {
     margin: 40px 0 0;
 }
+ .wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 
 ul {
     width: 200px;
-    align-items: center;
 }
 
 li {

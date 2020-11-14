@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Test from "@/components/Test";
 import Authors from "@/components/Authors";
+import Default from "@/components/Default";
 //...findet die Pade via @/src o.a. ../src//
 
 Vue.use(VueRouter)
@@ -12,6 +13,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/{?}',
+    name: 'Default',
+    component: Default
   },
   {
     path: '/test',
