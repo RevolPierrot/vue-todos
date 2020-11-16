@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <!--<img alt="Vue logo" src="../assets/logo.png">-->
-    <HelloWorld msg="Welcome to Your Vue.js App" name="Juniper"/>
+      <div>
+          <h3>{{ message }}</h3>
+          Message:<input type="text" v-model="message" />
+      </div>
+    <HelloWorld name="Juniper"/>
       <Test/>
   </div>
 </template>
@@ -9,10 +13,14 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue"
-import Test from "@/components/Test"
 
 export default {
   name: 'Home',
-  components: {HelloWorld, Test}
+  components: {HelloWorld},
+    data () {
+      return {
+          message: "Standart Wert",
+      }
+    }
 }
 </script>

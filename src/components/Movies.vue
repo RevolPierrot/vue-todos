@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Meine Movies (Anzahl: )</h1>
+        <h1>Meine Movies (Anzahl: {{movies.length}} )</h1>
         <div class="wrapper">
             <table class="table">
                 <tr>
@@ -16,23 +16,24 @@
 </template>
 
 <script>
-import myMovies from "@/data/movies.json";
+import myMovies from "@/data/movies.json"
 import Movie from "@/components/Movie";
-
 export default {
     name: "Movies",
     components: {Movie},
-    data () {
+    data() {
         return {
             movies: myMovies.data
         }
     }
 }
+
 </script>
 
 <style scoped>
 .wrapper {
     display: flex;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    text-align: left;
+}
 </style>

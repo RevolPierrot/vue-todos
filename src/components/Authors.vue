@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Meine Autoren (Anzahl: )</h1>
+        <h1>Meine Autoren (Anzahl: {{authors.length}})</h1>
         <div class="wrapper">
             <table class="table">
                 <tr>
@@ -32,7 +32,7 @@ export default {
 <style scoped>
 .wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    text-align: left;
 }
-
 </style>

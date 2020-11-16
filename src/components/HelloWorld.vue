@@ -5,9 +5,12 @@
             <span v-if="name">Dein Name lautet <b>{{ name }}</b></span>
             <span v-else><b>Bitte einen Namen eingeben.</b></span>
         </div>
-        <ul>
-            <li :key="item" v-for="item in names">{{ item }}</li>
-        </ul>
+        <div class="list">
+            <ul>
+                <li :key="item" v-for="item in names">{{ item }}</li>
+            </ul>
+        </div>
+
     </div>
 </template>
 
@@ -48,8 +51,12 @@ h3 {
      justify-content: center;
  }
 
-ul {
+.list {
     width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 li {
