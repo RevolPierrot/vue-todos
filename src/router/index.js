@@ -5,6 +5,7 @@ import Test from "@/components/Test";
 import Authors from "@/components/Authors";
 import Default from "@/components/Default";
 import Movies from "@/components/Movies";
+import Todos from "@/components/Todos";
 //...findet die Pade via @/src o.a. ../src//
 
 Vue.use(VueRouter)
@@ -29,6 +30,11 @@ const routes = [
     path: '/movies',
     name: 'Movie',
     component: Movies
+  },
+  {
+    path: '/todos',
+    name: 'Todos',
+    component: Todos
   },
   {
     path: '/about',

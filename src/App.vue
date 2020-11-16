@@ -5,7 +5,8 @@
       <router-link to="/about">About</router-link> |
         <router-link to="/test">Test</router-link> |
         <router-link to="/authors">Authors</router-link> |
-        <router-link to="/movies">Movies</router-link>
+        <router-link to="/movies">Movies</router-link> |
+        <router-link to="/todos">Todos</router-link>
     </div>
       <!--router-view: hier wird der eigentliche page inhalt ausgegeben -->
     <router-view/>
